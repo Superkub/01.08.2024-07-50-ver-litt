@@ -120,3 +120,42 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+/* Transition Effect */
+.transition-circle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  margin: 1rem auto;
+}
+
+.transition-circle:hover {
+  background-color: blue;
+  transform: scale(1.2);
+}
+
+/* Animation Effect */
+.animation-square {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 1rem auto;
+  animation: moveAndChangeColor 3s infinite ease-in-out;
+}
+
+@keyframes moveAndChangeColor {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    background-color: green;
+  }
+  50% {
+    transform: translateX(200px) rotate(180deg);
+    background-color: yellow;
+  }
+  100% {
+    transform: translateX(0) rotate(360deg);
+    background-color: red;
+  }
+}
